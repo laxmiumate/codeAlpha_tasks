@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="animal">Animal</button>
+    <button class="filter-btn" data-filter="eleDevice">EleDevices</button>
+    <button class="filter-btn" data-filter="fruit">Fruits</button>
+
+    <!-- for images in of gallary -->
+    <div class="gallery">
+    <div class="gallery-item fruit"><img src="fruit3.jpg" alt="Nature 1" onclick="openLightbox(this.src)" /></div>  
+    <div class="gallery-item nature"><img src="nature.jpg" alt="Nature 1" onclick="openLightbox(this.src)" /></div>
+    <div class="gallery-item fruit"><img src="fruit.jpg" alt="fruit " onclick="openLightbox(this.src)" /></div>
+    <div class="gallery-item nature"><img src="nature2.jpg" alt="Nature 2" onclick="openLightbox(this.src)" /></div>
+    <div class="gallery-item eleDevice"><img src="eleDevice.jpg" alt="eleDevice" onclick="openLightbox(this.src)" /></div>
+    <div class="gallery-item animal"><img src="animal1.jpg"alt="animal" onclick="openLightbox(this.src)" /></div>
+  </div>
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
